@@ -4,6 +4,8 @@ An Analytical Chemistry instruments' locator and listing application.
 ## Introduction
 The Labnrd project is a collation project seeking to build a database of physical locations where researchers and research students can access usage. Institutions can list and bill their instruments accordingly to make them available to a wider audience of potential users of their services.
 
+For the deployed app https://www.characterize.tech
+
 **Key Features:**
 Quick search instruments by name or listing institution.
 Mpesa payment integration.
