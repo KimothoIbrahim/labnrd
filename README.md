@@ -1,4 +1,4 @@
-# labnrd
+# Labnrd
 An Analytical Chemistry instruments' locator and listing application.
 
 ## Introduction
