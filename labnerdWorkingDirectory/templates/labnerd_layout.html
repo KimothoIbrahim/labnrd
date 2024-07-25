@@ -11,59 +11,80 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/styles/labnerd_layout.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" type="text/css" href="../static/styles/labnerd_layout.css"> <!-- Link to your CSS file -->
     <!-- Favicon links (optional) -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Open Graph tags for social media (optional) -->
-    <meta property="og:title" content="labnrd.com">
+    <meta property="og:title" content="www.characterize.tech">
     <meta property="og:description" content="A catalogue of all analytical chmistry instuments in Kenya">
     <meta property="og:image" content="image.jpg"> <!-- URL to an image for social sharing -->
-    <meta property="og:url" content="http://www.labnrd.com">
+    <meta property="og:url" content="http://www.characterize.tech">
     <meta name="twitter:card" content="summary_large_image">
     <!-- Additional meta tags -->
     <!-- JavaScript files (optional) -->
-    <script src="script.js" defer></script> <!-- Link to your JavaScript file -->
+    <!-- <script src="script.js" defer></script> --> <!-- Link to your JavaScript file -->
 </head>
 <body>
     <header>
-        <a href="/home"><h1>labnrd</h1></a>
-        <!-- Navigation menu (optional) -->
-        <nav id="content_navigators">
-            <ul>
-                <li><a href="/instruments">Instruments</a></li>
-                <li><a href="/notes">Notes</a></li>
-                <li><a href="#Research Teams">Research Teams</a></li>
-            </ul>
-        </nav>
-        <nav id="user_navigators">
-            <ul>
-                {% if user %}
-                    <li><a href="/instrument_enlist">Add Instrument</a></li>
-                    <li><a href="/profile">Profile</a></li>
-                    <li><a href="/logout">Log out</a></li>
-                {% else %}
-                    <li><a style="background: linear-gradient(to right, lightgreen, skyblue); border-radius: 2px; padding: 8px; color: white;" href="/user_registration">Create Account</a></li>
-                    <li><a style="background: linear-gradient(to right, lightgreen, skyblue); border-radius: 2px; padding: 8px; color: white;" href="/login">Log In</a></li>
-                {% endif %}
-            </ul>
-        </nav>
+	    <div id="logosearch">
+        	<a href="/home"><h1>labnrd</h1></a>
+		<input id="search"/>
+	    </div>
+	    <div id="navs">
+        	<nav id="content_navigators">
+
+            	<ul>
+			<li><a href="{{ url_for('labnerd_instruments')}}">Instruments</a></li>
+			<li><a href="{{ url_for('labnerd_notes') }}">Notes</a></li>
+                	<li><a href="#Research Teams">Research Teams</a></li>
+            	</ul>
+        	
+		</nav>
+        
+		<nav id="user_navigators">
+            
+		<ul>
+                	{% if user %}
+                   	<li><a href="{{ url_for('labnerd_instrument_enlist') }}">Add Instrument</a></li>
+		    	<li><a href="{{ url_for('labnerd_profile') }}">Profile</a></li>
+                   	<li><a href="{{ url_for('labnerd_logout') }}">Log out</a></li>
+                	{% else %}
+                    	<li><a href="{{ url_for('labnerd_user_registration') }}">Create Account</a></li>
+                    	<li><a href="{{ url_for('labnerd_login') }}">Log In</a></li>
+                	{% endif %}
+            	</ul>
+        	</nav>
+	    </div>
     </header>
 
     <main>
-        <div class='flash'>
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-              {% for category, message in messages %}
-                <p style="background: {{ category }}"> {{ message }} </p>
-              {% endfor %}
-            {% endif %}
-        {% endwith%}
+    	<div class='flash'>
+        	{% with messages = get_flashed_messages(with_categories=true) %}
+            	{% if messages %}
+              	{% for category, message in messages %}
+                	<p style="background: {{ category }}"> {{ message }} </p>
+              	{% endfor %}
+            	{% endif %}
+        	{% endwith%}
         </div>
+
         {% block section %} {% endblock %}
+    
     </main>
 
     <footer>
+	<div class='footinfo'> 
+		<div id="products">
+			<h4> Products </h4>
+			<p> Labnerd </p>
+		</div>
+		<div id="careers">
+                        <h4> Careers </h4>
+                        <p> Researcher jobs </p>
+			<p> Sampler jobs </p>
+                </div>
+	</div>
         <p>&copy; 2024 labnerd ltd. All rights reserved.</p>
     </footer>
 </body>

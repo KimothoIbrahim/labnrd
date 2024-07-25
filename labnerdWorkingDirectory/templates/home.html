@@ -1,35 +1,43 @@
 {% extends "labnerd_layout.html" %}
 {% block section %}
+
 <section id="banner">
   <h1> Measure All Things :) </h1>
   <p>Get the right <span style="background: white; color: lightgreen;">INSTRUMENT</span> for your kind of analyses</p>
-  <ul style="width: 30%; display: flex; flex-direction: row; justify-content: center; font-size: 1.2em; position: relative; top: 10px;">
-    <div style="display: flex; flex-direction:column; align-items:flex-start; color: white;"> 
-      <a><li style="margin-bottom: 5px;">Chromatography</li></a>
-      <a><li style="margin-bottom: 5px;">Electrochemistry</li></a>
-      <a><li style="margin-bottom: 5px;">Microscopy</li></a>
-      <a><li style="margin-bottom: 5px;">Spectroscopy</li></a>
-      <a href="https://lipia-online.vercel.app/link/labnerd"><button> Buy Atomic absorption - Ksh 20/- </button></a>
-    </div>
-  </ul>
 </section>
 
-<section id="categories">
-    <h2> Categories </h2>
-    <ul> 
-        {% for category in categories %}
-        <li>  replace with the category </li>
-        {% endfor %}
-    </ul>
-</section>
+<div id="slide"> 
+	{% for category in categories %}
+	<div class="card" style="border: 1px solid black;">
+		<!-- <img src="#" alt="Card image" class="card-image"> -->
+		<div class="card-content">
+			<h2 class="card-title"> {{ category[0] }}</h2>
+			{% if category[0] == 'Chromatography'%}
+			<p class="card-text">Chromatographic instruments are essential tools used in analytical chemistry for separating, identifying, and quantifying compounds in a mixture. They are widely employed in various industries, including pharmaceuticals, environmental monitoring, food and beverage, and biotechnology. Chromatography techniques, such as gas chromatography (GC) and liquid chromatography (LC), provide high precision and accuracy in analyzing complex samples.</p>
+			{% elif category[0] == 'Spectroscopy'%}
+			<p class="card-text">Spectroscopic instruments are advanced analytical tools used to measure and analyze the interaction of light with matter. These instruments are crucial in various fields such as chemistry, physics, biology, and environmental science. They help in identifying the composition, structure, and properties of substances by examining their spectral characteristics.</p>
+			{% elif category[0] == 'Microscopy'%}
+                        <p class="card-text">Microscopic instruments are essential tools used to observe and analyze structures that are too small to be seen with the naked eye. These instruments play a crucial role in various fields such as biology, materials science, medicine, and nanotechnology. They enable scientists and researchers to explore the micro and nano-world, leading to groundbreaking discoveries and innovations.</p>
+			{% else %}
+			<p class="card-text">This is some descriptive information on the topic.</p>
+			{% endif %}
+			<a href="/instruments/{{ category[0] }}" >
+			<p class="gotoinstruments">Show instrument catalogue ->></p>
+			</a>
+		</div>
+	</div>
+	{% endfor %}
+</div>
 
-<section id="reviews" style="display: flex; justify-content: center; background-color: rgba(240, 250, 255, .2); padding: 50px;">
-    <div id="reviewcard" style="width: 60%; border-radius: 10px; background-color: skyblue; height: fit-content; padding: 20px; color: white;">
+<!-- <section id="reviews">
+    <div id="reviewcard">
         <p> *** 3 stars *** </p>
         <h2> review content </h2>
         <p> reviewer's name </p>
     </div>
-</section>
+</section> -->
 
-<h2> enlist your Instrument with us </h2>
+<div id="calltoenlist">
+	<a href="{{ url_for('labnerd_instrument_enlist') }}"> <p> Enlist your Instrument with us </p> </a>
+</div>
 {% endblock section %}

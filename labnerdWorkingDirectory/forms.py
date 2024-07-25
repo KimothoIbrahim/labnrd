@@ -9,6 +9,7 @@ class user_registration(FlaskForm):
     """ make a registrationform with validation """
     firstname = StringField("Firstname", validators=[DataRequired(message="This is required"), Length(min=2, max=16)])
     surname = StringField("Surname", validators=[DataRequired(), Length(min=2, max=16)])
+    phone = StringField('Phone Number', validators=[DataRequired(message="Enter Phone Number without the leading '0' digit e.g 723567937"), Length(min=9, max=9)])
     email = EmailField("Email", validators=[DataRequired(), Email()])
     password = PasswordField("Password", validators=[DataRequired(), Length(min=6)])
     confirm_password = PasswordField("Confirm Password", validators=[DataRequired(),

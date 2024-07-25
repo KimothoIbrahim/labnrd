@@ -1,6 +1,8 @@
 -- setup labnerd database for use
+CREATE USER IF NOT EXISTS labnerd_user@localhost IDENTIFIED BY 'labn3rd';
 DROP DATABASE IF EXISTS labnerd_db;
 CREATE DATABASE IF NOT EXISTS labnerd_db;
+GRANT ALL PRIVILEGES ON labnerd_db.* TO labnerd_user@localhost;
 
 USE labnerd_db;
 
@@ -9,6 +11,7 @@ CREATE TABLE `clients` (
   `id` INT auto_increment NOT NULL,
   `firstname` varchar(30) NOT NULL,
   `surname` varchar(30) NOT NULL,
+  `phone` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
   `password` varchar(60) NOT NULL,
   `buying_user` BOOLEAN DEFAULT TRUE,
@@ -19,7 +22,7 @@ CREATE TABLE `clients` (
 );
 
 LOCK TABLES `clients` WRITE;
-INSERT INTO `clients` (`firstname`, `surname`, `email`, `password`, `buying_user`, `selling_user`) VALUES ("Ibrahim", "Muriuki", "kimothoibrahim@yahoo.com", "$2b$12$d62nuJG2ErEY/0y/AmaBTuMCidzTNkkorSJ.Jho18hWmIBLmhGcU6", TRUE, TRUE);
+INSERT INTO `clients` (`firstname`, `surname`, `phone`, `email`, `password`, `buying_user`, `selling_user`) VALUES ("Ibrahim", "Muriuki", "714802982", "kimothoibrahim@yahoo.com", "$2b$12$d62nuJG2ErEY/0y/AmaBTuMCidzTNkkorSJ.Jho18hWmIBLmhGcU6", TRUE, TRUE);
 UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `instruments`;
@@ -33,7 +36,7 @@ CREATE TABLE `instruments` (
   `client_id` INT NOT NULL,
   `description` varchar(1024) DEFAULT NULL,
   `location` varchar(1024) NOT NULL,
-  `instrument_image` VARCHAR(60) DEFAULT "default.png",
+  `instrument_image` VARCHAR(1024) DEFAULT "default.png",
   `latitude` float DEFAULT NULL,
   `longitude` float DEFAULT NULL,
   `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -45,7 +48,6 @@ CREATE TABLE `instruments` (
 LOCK TABLES `instruments` WRITE;
 INSERT INTO `instruments` (`name`, `price_per_day`, `price_per_sample`, `category_id`, `client_id`, `description`, `location`) VALUES ("AAS", 2300, 275, 1, 1, "Does elemental analysis", "University of Nairobi - Nairobi"),  ("ICP-AES", 3500, 320, 1, 1, "Does trace element analysis", "Kenyatta University - Ruiru"),  ("HPLC", 1800, 145, 3, 1, "Does chromatographic work", "Analabs - Mombasa Road"),  ("SEM", 3800, 400, 2, 1, "Does microscopy on varied elemets", "SGS - Mombasa"),  ("FTIR", 2800, 240, 1, 1, "Does desicive qualitative determiations on organic elements", "USIU-Africa - Nairobi");
 UNLOCK TABLES;
-
 
 DROP TABLE IF EXISTS `sales`;
 CREATE TABLE `sales` (
@@ -78,5 +80,5 @@ CREATE TABLE `categories`(
 );
 
 LOCK TABLES `categories` WRITE;
-INSERT INTO `categories` (`name`) VALUES ("chromatography"), ("spectroscopy"), ("microscopy"), ("other");
+INSERT INTO `categories` (`name`) VALUES ("Chromatography"), ("Spectroscopy"), ("Microscopy"), ("Electrochemistry"), ("Others");
 UNLOCK TABLES;

@@ -26,6 +26,19 @@
           {{ form.surname(class="input") }}
         {% endif %}
       </div>
+      
+      <div style="display: inline-block;>
+        {{ form.phone.label(class="label") }}
+        {% if form.phone.errors %}
+          {{ form.phone(class="input") }}
+          {% for error in form.phone.errors %}
+            <span style="color: red;"> {{ error }} </span>
+          {% endfor %}
+        {% else %}
+          {{ form.phone(class="input") }}
+        {% endif %}
+      </div>
+      
       <div>
         {{ form.email.label(class="label") }}
         {% if form.email.errors %}

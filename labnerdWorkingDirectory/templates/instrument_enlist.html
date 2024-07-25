@@ -66,8 +66,9 @@
         {% for error in form.location.errors %}
           <span> {{ error }}</span>
         {% endfor %}
-      {% else %}
+	{% else %}
         {{ form.location }}
+	{% endif %}
     </div>
     <div>
       {{ form.instrument_image.label }}

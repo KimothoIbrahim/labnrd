@@ -1,28 +1,36 @@
 {% extends "labnerd_layout.html" %}
 {% block section %}
-<section id="Instruments">
-    <h3> category </h3>
-    <ul>
-        <li> spectroscopy </li>
-        <li> microscopy </li> 
-        <li> chromatography </li>
-        <li> electrochemistry </li>
-        <li> miscellenious </li>
-    </ul>
-
-    <div>
-        {{ res }}
-        <h2> instrument.name  </h2>
-        <p> location :  instrument.institute - instrument.city </p>
-        <p>  instrument.details </p>
-        <div id="pic-section">
-            <div id="button">book: 290/= per sample</div>
-            <p> price per week : 3000/= </p>
+<section id="instruments">
+	<!-- <h1 style="align-self: flex-start;">{{ category }} </h1> -->
+	{% if not res[0] %}
+	<div>
+	<h3> Apologies!</h3>
+	<h3> We are working to bring you the instrument you love.</h3>
+	</div>
+	{% endif %}
+   
+	{% for instrument in res %}
+    	<div class=instrumentcard style="border: 1px solid black;">
+		<img src="../static/images/chemistry.jpg" style="width:100%; max-height: 20%;" >
+		<div class="content">
+		<h2 class="Ititle"> {{ instrument[0] }} </h2>
+		<!--	<p>  {{ instrument[1] }} </p> -->
+		<div class="text">
+			<p> location : <br> <span style="color: grey;">{{ instrument[5] }}</span> </p>
+		<p> price per sample <span style="color: lightgreen; padding: 0 6px; background: white;"><strong>{{ instrument[2] }}</strong> </span></p>
+		<p> price per week <span style="color: lightgreen; padding: 0 6px; background: white;"><strong>{{ instrument[3] }}</strong> </span> </p>
+		<p> Description <br> {{ instrument[1] }} </p>  
+		</div>
+		<h3 class="book" style="color: white;"> Reserve with <br> <span style="background: white; padding: 0 6px; color: lightgreen"><a href="/buy/{{instrument[7]}}/{{user}}">M-pesa</a></span> </h3>  
+		</div>
         </div>
-    </div>
+    	</div>
+    	{% endfor %}
     
 </section>
 
-    <h3 id="call_to_enlist"> enlist your instrument with us </h3>
+<div id="calltoenlist">
+        <a href="{{ url_for('labnerd_instrument_enlist') }}"> <p> Enlist your Instrument with us </p> </a>
+</div>
 
 {% endblock section %}
