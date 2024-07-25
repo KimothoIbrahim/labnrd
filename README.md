@@ -34,10 +34,10 @@ To run a local copy:
   host with gunicorn
     'gunicorn --bind 0.0.0.0:8000 labnerd:app'
 
-**Note**
+## Note
 The first iteration of the Labnrd project is developed as portfolio project under the holberton SE program. It is born of my background in the chemistry field and the struggles of young reserchers who have no idea where to start with their projects, project budgets or even what to use.
 
-*Future features will include*:
+**Future features will include:**
    Incorporating sales performace for in listing user accounts.
    Providing downloadable reciepts as proof of payment on the platform.
    Credit card payments buying users.
