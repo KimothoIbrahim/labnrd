@@ -1,0 +1,28 @@
+{% extends "labnerd_layout.html" %}
+{% block section %}
+<section id="Instruments">
+    <h3> category </h3>
+    <ul>
+        <li> spectroscopy </li>
+        <li> microscopy </li> 
+        <li> chromatography </li>
+        <li> electrochemistry </li>
+        <li> miscellenious </li>
+    </ul>
+
+    <div>
+        {{ res }}
+        <h2> instrument.name  </h2>
+        <p> location :  instrument.institute - instrument.city </p>
+        <p>  instrument.details </p>
+        <div id="pic-section">
+            <div id="button">book: 290/= per sample</div>
+            <p> price per week : 3000/= </p>
+        </div>
+    </div>
+    
+</section>
+
+    <h3 id="call_to_enlist"> enlist your instrument with us </h3>
+
+{% endblock section %}

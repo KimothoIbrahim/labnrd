@@ -1,0 +1,33 @@
+{% extends "labnerd_layout.html" %}
+{% block section %}
+<section>
+  <div id='profile_details'>
+    <div>
+
+      profile image
+      <form method="POST" enctype="multipart/form-data">
+        <label for="prof_pic"> Choose profile picture </label>
+        <input id="prof_pic" type="file" name="prof_pic" />
+        <button type="submit"> Add picture </button>
+      </form>
+ 
+    </div>
+    <span> name </span> <span> email </span> <span> mobile number </span>
+    </hr>
+    
+    <div id="orders_made">
+      <div id="instrument_card">
+        you have access to AAS at Kenyatta University on Monday 23rd, 2024
+        3400 bench fee ->  paid
+      </div>
+    </div>
+
+    <div id="past_purchases">
+      <div id="instrument_card">
+        AAS at Kenyatta University
+        [last use date ->  Monday 23rd, 2024]
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock section %}

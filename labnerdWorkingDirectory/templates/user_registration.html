@@ -1,0 +1,76 @@
+{% extends "labnerd_layout.html" %}
+{% block section %}
+<form method="POST" id="register_user">
+  {{ form.hidden_tag() }}
+  <fieldset>
+    <legend>Create Account! Love Labnerd</legend>
+      <div style="display: inline-block;">
+        {{ form.firstname.label(class="label") }}
+        {% if form.firstname.errors %}
+          {{ form.firstname(class="input") }}
+          {% for error in form.firstname.errors %}
+            <span style="color: red;"> {{ error }} </span>
+          {% endfor %}
+        {% else %}
+          {{ form.firstname(class="input") }}
+        {% endif %}
+      </div>
+      <div style="display: inline-block;>
+        {{ form.surname.label(class="label") }}
+        {% if form.surname.errors %}
+          {{ form.surname(class="input") }}
+          {% for error in form.surname.errors %}
+            <span style="color: red;"> {{ error }} </span>
+          {% endfor %}
+        {% else %}
+          {{ form.surname(class="input") }}
+        {% endif %}
+      </div>
+      <div>
+        {{ form.email.label(class="label") }}
+        {% if form.email.errors %}
+          {{ form.email(class="input") }}
+          {% for error in form.email.errors %}
+            <span style="color: red;"> {{ error }} </span>
+          {% endfor %}
+        {% else %}
+          {{ form.email(class="input") }}
+        {% endif %}
+      </div>
+      <div>
+        {{ form.password.label(class="label") }}
+        {% if form.password.errors %}
+          {{ form.password(class="input") }}
+          {% for error in form.password.errors %}
+            <span style="color: red;"> {{ error }} </span>
+          {% endfor %}
+        {% else %}
+          {{ form.password(class="input") }}
+        {% endif %}
+      </div>
+      <div>
+        {{ form.confirm_password.label(class="label") }}
+        {% if form.confirm_password.errors %}
+          {{ form.confirm_password(class="input") }}
+          {% for error in form.confirm_password.errors %}
+            <span style="color: red;"> {{ error }} </span>
+          {% endfor %}
+        {% else %}
+          {{ form.confirm_password(class="input") }}
+        {% endif %}
+      </div>
+      <div style="flex-direction: row;">
+        {{ form.buying_user.label(class="label") }}
+        {{ form.buying_user(class="input") }}
+      </div>
+      <div style="flex-direction: row;">
+        {{ form.selling_user.label(class="label") }}
+        {{ form.selling_user(class="input") }}
+      </div>
+      <div>
+        {{ form.submit(class="button") }}
+      </div>
+  </fieldset>
+  <small> Already have an account? <a href={{url_for('labnerd_login') }}>Login </small>
+</form>
+{% endblock section %}

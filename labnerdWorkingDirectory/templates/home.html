@@ -1,0 +1,35 @@
+{% extends "labnerd_layout.html" %}
+{% block section %}
+<section id="banner">
+  <h1> Measure All Things :) </h1>
+  <p>Get the right <span style="background: white; color: lightgreen;">INSTRUMENT</span> for your kind of analyses</p>
+  <ul style="width: 30%; display: flex; flex-direction: row; justify-content: center; font-size: 1.2em; position: relative; top: 10px;">
+    <div style="display: flex; flex-direction:column; align-items:flex-start; color: white;"> 
+      <a><li style="margin-bottom: 5px;">Chromatography</li></a>
+      <a><li style="margin-bottom: 5px;">Electrochemistry</li></a>
+      <a><li style="margin-bottom: 5px;">Microscopy</li></a>
+      <a><li style="margin-bottom: 5px;">Spectroscopy</li></a>
+      <a href="https://lipia-online.vercel.app/link/labnerd"><button> Buy Atomic absorption - Ksh 20/- </button></a>
+    </div>
+  </ul>
+</section>
+
+<section id="categories">
+    <h2> Categories </h2>
+    <ul> 
+        {% for category in categories %}
+        <li>  replace with the category </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section id="reviews" style="display: flex; justify-content: center; background-color: rgba(240, 250, 255, .2); padding: 50px;">
+    <div id="reviewcard" style="width: 60%; border-radius: 10px; background-color: skyblue; height: fit-content; padding: 20px; color: white;">
+        <p> *** 3 stars *** </p>
+        <h2> review content </h2>
+        <p> reviewer's name </p>
+    </div>
+</section>
+
+<h2> enlist your Instrument with us </h2>
+{% endblock section %}

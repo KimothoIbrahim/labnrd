@@ -1,0 +1,40 @@
+{% extends "labnerd_layout.html" %}
+{% block section %}
+  <div id="form">
+    <form method="POST" action="">
+      {{ form.hidden_tag() }}
+      <fieldset>
+        <legend> Enter Labnerd</legend>
+        <div>
+          {{ form.email.label(class="label") }}
+          {% if form.email.errors %}
+              {% for error in errors %}
+                {{ error }}
+              {% endfor %}
+                {{ form.email(class="input") }}
+          {% else %}
+              {{ form.email(class="input") }}
+          {% endif %}
+        </div>
+        <div>
+          {{ form.password.label(class="label") }}
+          {% if form.password.errors %}
+              {% for error in errors %}
+                {{ error }}
+              {% endfor %}
+                {{ form.password(class="input") }}
+          {% else %}
+              {{ form.password(class="input") }}
+          {% endif %}
+        </div>
+        <div>
+          {{ form.submit(class="button") }}
+        </div>
+      </fieldset>
+      <div>
+        {{ form.session.label }}
+        {{ form.session }}
+      </div>
+    </form> 
+  </div>
+{% endblock section %}
