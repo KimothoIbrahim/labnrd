@@ -1,4 +1,4 @@
-# labnrd
+# Labnrd
 An Analytical Chemistry instruments' locator and listing application.
 
 ## Introduction
@@ -22,7 +22,7 @@ To run a local copy:
 
 2. Navigate to project directory
 
-   cd labnerdWorkingDirectory
+   cd labnrd/labnerdWorkingDirectory
 
 3. Install required dependencies
 
@@ -34,6 +34,16 @@ To run a local copy:
   host with gunicorn
     'gunicorn --bind 0.0.0.0:8000 labnerd:app'
 
+## Note
+The first iteration of the Labnrd project is developed as portfolio project under the ALX SE program. It is born of my background in the chemistry field and the struggles of young reserchers who have no idea where to start with their academic projects, project budgets or even what to use.
+
+**Future features will include:**
+   Incorporating sales performace for in listing user accounts.
+   Providing downloadable reciepts as proof of payment on the platform.
+   Credit card payments buying users.
+   Cashout options for listing users.
+   A complete admin dashboard to precisely tailor your product listing as desired.
+
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
@@ -43,6 +53,6 @@ For support and inquiries, please contact me at kimothoibrahim@yahoo.com
 ## Acknowledgements
 Kimotho Ibrahim
 
-libraries
+Libraries
 PIL
 Flask, wtf, forms, login.
