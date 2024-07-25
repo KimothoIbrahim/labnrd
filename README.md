@@ -6,10 +6,10 @@ The Labnrd project is a collation project seeking to build a database of physica
 
 **Key Features:**
 Quick search instruments by name or listing institution.
-Mpesa payment integration
-All your orders/listings in a single Dashboard
+Mpesa payment integration.
+All your orders/listings in a single Dashboard.
 
-## 
+## Installation
 Labnrd is built in Python3.0
 
 To run a local copy:
