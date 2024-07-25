@@ -22,7 +22,7 @@ To run a local copy:
 
 2. Navigate to project directory
 
-   cd labnerdWorkingDirectory
+   cd labnrd/labnerdWorkingDirectory
 
 3. Install required dependencies
 
