@@ -37,7 +37,7 @@ To run a local copy:
 ## Project Visuals
 
 #### Labnrd Homepage
-
+![labnerd homepage screenshot](docs/images/labnrd_homepage.JPG)
 
 [![watch video](https://img.youtube.com/vi/3LfVwDQCir8/0.jpg)](https://www.youtube.com/watch?v=[3LfVwDQCir8](https://www.youtube.com/watch?v=3LfVwDQCir8))
 
