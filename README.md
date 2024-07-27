@@ -57,10 +57,10 @@ An illustration of these architecture is as below:
 The first iteration of the Labnrd project is developed as portfolio project under the ALX SE program. It is born of my background in the chemistry field and the struggles of young reserchers who have no idea where to start with their academic projects, project budgets or even what to use.
 
 **Future features will include:**
-   Incorporating sales performace for in listing user accounts.
+   Incorporating sales performace in listing-user accounts.
    Providing downloadable reciepts as proof of payment on the platform.
-   Credit card payments buying users.
-   Cashout options for listing users.
+   Credit card payments for buying users.
+   Cashout options for listing-users.
    A complete admin dashboard to precisely tailor your product listing as desired.
 
 ## License
