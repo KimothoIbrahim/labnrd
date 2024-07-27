@@ -38,7 +38,7 @@ To run a local copy:
 
 #### Labnrd Homepage
 ![labnerd homepage screenshot](docs/images/labnrd_homepage.JPG)
-#### Labnrd ux_chart
+---
 ![ux graphics](docs/images/labnerdUX_chart.JPG)
 
 ## Note
