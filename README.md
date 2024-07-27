@@ -34,6 +34,9 @@ To run a local copy:
   host with gunicorn
     'gunicorn --bind 0.0.0.0:8000 labnerd:app'
 
+## Project Visuals
+![labnerd homepage screenshot](docs/images/labnrd_homepage.JPG)
+
 ## Note
 The first iteration of the Labnrd project is developed as portfolio project under the ALX SE program. It is born of my background in the chemistry field and the struggles of young reserchers who have no idea where to start with their academic projects, project budgets or even what to use.
 
