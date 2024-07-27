@@ -39,7 +39,7 @@ To run a local copy:
 #### Labnrd Homepage
 ![labnerd homepage screenshot](docs/images/labnrd_homepage.JPG)
 
-![labnrd youtube demo](https://www.youtube.com/watch?v=3LfVwDQCir8)
+[labnrd youtube demo](https://www.youtube.com/watch?v=3LfVwDQCir8)
 
 ---
 The flow of experience on labnerd is as in the following chart:
