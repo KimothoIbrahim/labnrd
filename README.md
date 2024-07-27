@@ -54,5 +54,5 @@ For support and inquiries, please contact me at kimothoibrahim@yahoo.com
 Kimotho Ibrahim
 
 Libraries
-PIL
+PIL,
 Flask, wtf, forms, login.
