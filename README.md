@@ -20,6 +20,9 @@ To run a local copy:
    ```bash
    git clone https://github.com/KimothoIbrahim/labnrd.git
 
+   > The best
+   > It's my birthday
+
 2. Navigate to project directory
 
    cd labnrd/labnerdWorkingDirectory
