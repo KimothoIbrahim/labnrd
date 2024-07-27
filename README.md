@@ -20,7 +20,7 @@ To run a local copy:
    ```bash
    git clone https://github.com/KimothoIbrahim/labnrd.git
 
-> The best
+> **The best**
 > >
 > It's my birthday
 
