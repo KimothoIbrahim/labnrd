@@ -37,7 +37,7 @@ To run a local copy:
 ## Project Visuals
 
 #### Labnrd Homepage
-![labnerd homepage screenshot](docs/images/labnrd_homepage.PNG)
+![labnerd homepage screenshot](docs/images/labnrd_homepage.JPG)
 
 ## UX Experience
  >Any random persion the internet can see the whole listing of instruments hosted on Labnrd.
@@ -45,13 +45,13 @@ To run a local copy:
 
  >See the graphic here:
 
-![ux graphics](docs/images/labnerdUX_chart.PNG)
+![ux graphics](docs/images/labnerdUX_chart.png)
 
 ## Architecture
 Labnerd is deployed by setting up two Linux (Ubuntu) VPS' with a fully secure MySQL database, configuring NGINX to serve static files and proxing all other traffic to GUNICORN to serve the application. User requests first hit a load-balancer which equally distributes traffic between the two servers. The firewall is UFW on both servers.
 An illustration of these architecture is as below:
 
-![labnerd architecture chart](docs/images/LabnerdArchitechture.JPG)
+![labnerd architecture chart](docs/images/LabnerdArchitechture.png)
 
 ## Note
 The first iteration of the Labnrd project is developed as portfolio project under the ALX SE program. It is born of my background in the chemistry field and the struggles of young reserchers who have no idea where to start with their academic projects, project budgets or even what to use.
