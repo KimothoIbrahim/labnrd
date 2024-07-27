@@ -35,6 +35,8 @@ To run a local copy:
     'gunicorn --bind 0.0.0.0:8000 labnerd:app'
 
 ## Project Visuals
+
+### Labnrd Homepage
 ![labnerd homepage screenshot](docs/images/labnrd_homepage.JPG)
 
 ## Note
