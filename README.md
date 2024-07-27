@@ -37,7 +37,7 @@ To run a local copy:
 ## Project Visuals
 
 #### Labnrd Homepage
-![labnerd homepage screenshot](docs/images/labnrd_homepage.JPG)
+![labnerd homepage screenshot](docs/images/labnrd_homepage.PNG)
 
 ## UX Experience
  >Any random persion the internet can see the whole listing of instruments hosted on Labnrd.
@@ -45,7 +45,7 @@ To run a local copy:
 
  >See the graphic here:
 
-![ux graphics](docs/images/labnerdUX_chart.JPG)
+![ux graphics](docs/images/labnerdUX_chart.PNG)
 
 ## Architecture
 Labnerd is deployed by setting up two Linux (Ubuntu) VPS' with a fully secure MySQL database, configuring NGINX to serve static files and proxing all other traffic to GUNICORN to serve the application. User requests first hit a load-balancer which equally distributes traffic between the two servers. The firewall is UFW on both servers.
