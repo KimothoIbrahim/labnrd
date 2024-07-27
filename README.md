@@ -39,11 +39,10 @@ To run a local copy:
 #### Labnrd Homepage
 ![labnerd homepage screenshot](docs/images/labnrd_homepage.JPG)
 
-[![watch video](https://img.youtube.com/vi/3LfVwDQCir8/0.jpg)](https://www.youtube.com/watch?v=[3LfVwDQCir8](https://www.youtube.com/watch?v=3LfVwDQCir8))
-
-
----
-The flow of experience on labnerd is as in the following chart:
+## UX Experience
+>Any random persion the internet can see the whole listing of instruments hosted on Labnrd.
+>Only users with an account can transact to by services, to list and price an Instrument of their own or to see order history for buying user (sales history for selling users).
+See the graphic here:
 ![ux graphics](docs/images/labnerdUX_chart.JPG)
 
 ## Architecture
