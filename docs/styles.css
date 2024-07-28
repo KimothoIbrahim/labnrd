@@ -1,0 +1,17 @@
+button {
+    background-color: rgb(247, 255, 255);
+    height: fit-content;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
+    position: absolute;
+    color: black;
+    top: 80%; left: 3%;
+    padding: 1%;
+}
+
+button:hover {
+    background-color: black;
+    color: lightgreen;
+    box-shadow: 4px 4px 4px lightgreen;
+}
