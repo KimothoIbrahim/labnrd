@@ -3,25 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-<div style="">
-<header>
-  <nav style="height: 10%; border: 1px solid black; z-index: 2; background: white;"> <div style="color: lightgreen;">Labnerd</div> </nav>
+<body style="overflow-x: hidden;">
+<div style="position: relative;">
+<header style="height: fit-content; width: 100%; margin: 0%; padding: 0%; z-index: 1;">
+  <nav style="
+  margin: 0%; padding: 0%;
+  width: 100%;
+  vertical-align: middle;
+  background: lightgreen;">
+  <h1 style="
+  color: white;
+  font-family: Monoton; 
+  font-weight: 400;
+  width: 100%;
+  font-size: 2em;
+  margin: 0%;
+  padding: 0 3%;
+  vertical-align: bottom;
+  height: fit-content;">Labnrd</h1>
+  </nav>
 </header>
-<main>
-  <div style="width: 40%; height: 80%; z-index: 1; border: 1px solid red;">
-  <img src="./docs/images/labnrd_homepage.JPG" style="position: relative; width: 100%; height: 100%; object-fit: contain;">  
-  </div>
+<main style="z-index: 2;">
   <div>
-    
+  <div style="
+  width: 100%; 
+  height: 94dvh;
+  overflow: hidden; 
+  position: relative;
+  z-index: 10;
+  margin: auto;">
+  <h1 style="
+  font-size: 5em; 
+  color: grey;
+  position: absolute;
+  top: -3%; 
+  left: 3%;
+  z-index: 100;">Accurate,<br> Available, <br> Assay</h1>
+  <p style="
+  color: grey;
+  font-size: 2em;
+  position: absolute;
+  top: 48%; 
+  left: 3%;"> Find the right analytical instrument with Labnrd.</p>
+  <img src="./labnrd_homepage.JPG" 
+  style="position: relative;
+  top: 10%;
+  left: 40%;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: rotate(-40deg);">  
+  <button style="
+  background-color: rgb(247, 255, 255);
+  height: fit-content;
+  border-radius: 5px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px black;
+  position: absolute;
+  color: black;
+  top: 80%; left: 3%;
+  padding: 1%;">
+    <a href="https://www.characterize.tech" style="
+    text-decoration: none;
+    color: lightgreen;
+    font-weight: 400;
+    font-size: 2em;">Find your Instrument</a></button>
   </div>
+</div>
+<div style="
+background-color: rgb(247, 255, 255);
+overflow: hidden; 
+position: relative;
+width: 100%;
+min-height: 100dvh;">  
+
+<div style="
+position: absolute;
+background-color: grey;
+height: 70%;
+width: 20.5%;
+left: 15%;
+top: 20%;">
+
+<img src="./labnerd_card_with_Mpesa.JPG" alt="instruments_catalog" style="
+object-fit: contain; width: 100%; height: 100%;">
+
+</div>
+
+<div style="
+position: absolute; 
+top:20%;
+left:50%;
+font-size: 2em;
+color: grey;">
+  <h1> See <span>Locations,</span><br>Price per Sample,<br> and Easy pay with Mpesa </h1>
+</h1>
+</div>
+
 </main>
-<footer>
-  <div>Labnerd</div>
-  <p>Terms</p>
-  <p>About Labnerd</p>
+<footer style="
+display: flex;
+height: fit-content;
+justify-content: space-between;
+border-top: 2px solid lightgreen;
+align-items: center;">
+  <div style="
+  font-family: Monoton;
+  margin: 0%;
+  padding: 0 3%;
+  font-size: 2em;">Labnerd</div>
+  <div style="position: relative; right: 35%; display: flex; justify-content: space-between; width: 15%; color: lightgreen;">
+    <p>Terms</p>
+    <p>About Labnerd</p>
+  </div>
 </footer>
 </div>
 </body>
