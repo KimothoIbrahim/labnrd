@@ -40,8 +40,8 @@ To run a local copy:
 ![labnerd homepage screenshot](docs/images/labnrd_homepage.JPG)
 
 ## UX Experience
- >Any random persion the internet can see the whole listing of instruments hosted on Labnrd.
- >Only users with an account can transact to by services, to list and price an Instrument of their own or to see order history for buying-user ( or sales history for selling-users).
+ >Any random person the internet can see the whole listing of instruments hosted on Labnrd.
+ >Only users with an account can transact to buy services, to list and price an Instrument of their own or to see order history for buying-user ( or sales history for selling-users).
 
  >See the graphic here:
 
