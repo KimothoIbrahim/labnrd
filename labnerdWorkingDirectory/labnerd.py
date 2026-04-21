@@ -14,7 +14,7 @@ from flask_bcrypt import Bcrypt
 from flask import Flask, render_template, url_for, redirect, flash, session, request, jsonify
 from forms import user_registration, user_login, instrument_enlist
 
-conn = MySQLdb.connect(host="localhost", user="labnerd_user", passwd="labn3rd", db="labnerd_db")
+conn = MySQLdb.connect(host="localhost", user="labnerd_user", passwd="Labn3rd#1_", db="labnerd_db")
 
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
